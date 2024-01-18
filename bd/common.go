@@ -32,7 +32,7 @@ func DbConnect() error {
 		return err
 	}
 
-	fmt.Println("Conexión Exitosa a la BD")
+	fmt.Println("Conexión EXITOSA a la DB")
 	return nil
 }
 
@@ -42,7 +42,7 @@ func ConnStr(claves models.SecretRDSJson) string {
 	authToken = claves.Password
 	dbEndpoint = claves.Host
 	dbName = "gambit"
-	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?allowCleartextPassword=true", dbUser, authToken, dbEndpoint, dbName)
-	fmt.Println(dsn) //solo para depurar, ojo muestra la password en Cloudwords
+	dsn := fmt.Sprintf("%s:%s@tcp(%s)/%s?allowCleartextPasswords=true", dbUser, authToken, dbEndpoint, dbName)
+	fmt.Println(dsn) //solo para depurar, ojo muestra la password en CloudWatch
 	return dsn
 }

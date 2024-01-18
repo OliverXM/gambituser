@@ -22,7 +22,7 @@ func EjecutoLambda(ctx context.Context, event events.CognitoEventUserPoolsPostCo
 
 	if !ValidoParametros() {
 		fmt.Println("Error en parametros. Debe enviar 'SecretName'")
-		err := errors.New("Error en parametros. Debe enviar 'SecretName'")
+		err := errors.New("error en parametros - debe enviar SecretName")
 		return event, err
 	}
 

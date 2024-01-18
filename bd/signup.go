@@ -9,7 +9,7 @@ import (
 )
 
 func SignUp(sig models.SignUp) error {
-	fmt.Println("Comienza Registro")
+	fmt.Println(" > Inicio de Registro del Usuario en la DB")
 
 	err := DbConnect()
 	if err != nil {
@@ -26,6 +26,6 @@ func SignUp(sig models.SignUp) error {
 		return err
 	}
 
-	fmt.Println("SignUp > Ejecución Exitosa")
+	fmt.Println("SignUp > Usuario Registrado en la DB EXITOSAMENTE")
 	return nil
 }
